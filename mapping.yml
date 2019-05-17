@@ -1,143 +1,208 @@
 tables:
   healthcare_facilities_node:
     columns:
-    - name: osm_id
-      type: id
-    - name: geometry
-      type: geometry
-    - name: type
-      type: mapping_value
-    - key: name
-      name: name
-      type: string
-    - key: addr:full
-      name: physical_address
-      type: string
-    - key: contact:phone
-      name: phone
-      type: string
-    - key: nature_of_facility
-      name: nature_of_facility
-      type: string
-    - key: facility
-      name: scope_of_service
-      type: string
-    - key: opening_hours
-      name: operation
-      type: string
-    - key: health_facility:bed
-      name: full_time_beds
-      type: string
-    - key: staff_count:nurses
-      name: nurses
-      type: string
-    - key: staff_count:doctors
-      name: doctors
-      type: string
-    - key: operator:type
-      name: ownership
-      type: string
+      - name: osm_id
+        type: id
+      - name: geometry
+        type: geometry
 
-    - key: operator
-      name: operator
-      type: string
-    - key: status
-      name: status
-      type: string
-    - key: emergency
-      name: emergency
-      type: string
-    - key: contact:website
-      name: website
-      type: string
-    - key: healthcare:speciality
-      name: speciality
-      type: string
+      # mandatory
+      - key: amenity
+        name: amenity
+        type: string
+      - key: healthcare
+        name: healthcare
+        type: string
+      - key: name
+        name: name
+        type: string
+      - key: operator
+        name: operator
+        type: string
+      - key: source
+        name: source
+        type: string
+
+      # others
+      - key: healthcare:speciality
+        name: speciality
+        type: string
+      - key: operator:type
+        name: operator_type
+        type: string
+      - key: addr:full
+        name: addr_full
+        type: string
+      - key: contact:phone
+        name: contact_number
+        type: string
+      - key: operational_status
+        name: operational_status
+        type: string
+      - key: opening_hours
+        name: opening_hours
+        type: string
+      - key: beds
+        name: beds
+        type: string
+      - key: staff_count:doctors
+        name: staff_doctors
+        type: string
+      - key: staff_count:nurses
+        name: staff_nurses
+        type: string
+      - key: health_amenity:type
+        name: health_amenity_type
+        type: string
+      - key: dispensing
+        name: dispensing
+        type: string
+      - key: wheelchair
+        name: wheelchair
+        type: string
+      - key: emergency
+        name: emergency
+        type: string
+      - key: insurance:health
+        name: insurance
+        type: string
+      - key: water_source
+        name: water_source
+        type: string
+      - key: Key:electricity
+        name: electricity
+        type: string
+      - key: is_in:health_area
+        name: is_in_health_area
+        type: string
+      - key: is_in:health_zone
+        name: is_in_health_zone
+        type: string
+      - key: url
+        name: url
+        type: string
     mapping:
       amenity:
-      - clinic
-      - hospital
-      - doctors
-      - dentist
-      - pharmacy
-      - laboratory
+        - clinic
+        - doctors
+        - hospital
+        - dentist
+        - pharmacy
       healthcare:
-      - clinic
-      - hospital
-      - doctors
-      - dentist
-      - pharmacy
-      - laboratory
+        - doctor
+        - pharmacy
+        - hospital
+        - clinic
+        - dentist
+        - physiotherapist
+        - alternative
+        - laboratory
+        - optometrist
+        - rehabilitation
+        - blood_donation
+        - birthing_center
     type: point
 
   healthcare_facilities_way:
     columns:
-    columns:
-    - name: osm_id
-      type: id
-    - name: geometry
-      type: geometry
-    - name: type
-      type: mapping_value
-    - key: name
-      name: name
-      type: string
-    - key: addr:full
-      name: physical_address
-      type: string
-    - key: contact:phone
-      name: phone
-      type: string
-    - key: nature_of_facility
-      name: nature_of_facility
-      type: string
-    - key: facility
-      name: scope_of_service
-      type: string
-    - key: opening_hours
-      name: operation
-      type: string
-    - key: health_facility:bed
-      name: full_time_beds
-      type: string
-    - key: staff_count:nurses
-      name: nurses
-      type: string
-    - key: staff_count:doctors
-      name: doctors
-      type: string
-    - key: operator:type
-      name: ownership
-      type: string
+      - name: osm_id
+        type: id
+      - name: geometry
+        type: geometry
 
-    - key: operator
-      name: operator
-      type: string
-    - key: status
-      name: status
-      type: string
-    - key: emergency
-      name: emergency
-      type: string
-    - key: contact:website
-      name: website
-      type: string
-    - key: healthcare:speciality
-      name: speciality
-      type: string
+      # mandatory
+      - key: amenity
+        name: amenity
+        type: string
+      - key: healthcare
+        name: healthcare
+        type: string
+      - key: name
+        name: name
+        type: string
+      - key: operator
+        name: operator
+        type: string
+      - key: source
+        name: source
+        type: string
+
+      # others
+      - key: healthcare:speciality
+        name: speciality
+        type: string
+      - key: operator:type
+        name: operator_type
+        type: string
+      - key: addr:full
+        name: addr_full
+        type: string
+      - key: contact:phone
+        name: contact_number
+        type: string
+      - key: operational_status
+        name: operational_status
+        type: string
+      - key: opening_hours
+        name: opening_hours
+        type: string
+      - key: beds
+        name: beds
+        type: string
+      - key: staff_count:doctors
+        name: staff_doctors
+        type: string
+      - key: staff_count:nurses
+        name: staff_nurses
+        type: string
+      - key: health_amenity:type
+        name: health_amenity_type
+        type: string
+      - key: dispensing
+        name: dispensing
+        type: string
+      - key: wheelchair
+        name: wheelchair
+        type: string
+      - key: emergency
+        name: emergency
+        type: string
+      - key: insurance:health
+        name: insurance
+        type: string
+      - key: water_source
+        name: water_source
+        type: string
+      - key: electricity
+        name: electricity
+        type: string
+      - key: is_in:health_area
+        name: is_in_health_area
+        type: string
+      - key: is_in:health_zone
+        name: is_in_health_zone
+        type: string
+      - key: url
+        name: url
+        type: string
     mapping:
       amenity:
-      - clinic
-      - hospital
-      - doctors
-      - dentist
-      - pharmacy
-      - laboratory
+        - clinic
+        - doctors
+        - hospital
+        - dentist
+        - pharmacy
       healthcare:
-      - clinic
-      - hospital
-      - doctors
-      - dentist
-      - pharmacy
-      - laboratory
-    type: linestring
+        - doctor
+        - pharmacy
+        - hospital
+        - clinic
+        - dentist
+        - physiotherapist
+        - alternative
+        - laboratory
+        - optometrist
+        - rehabilitation
+        - blood_donation
+        - birthing_center
+    type: polygon
